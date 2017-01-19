@@ -1,7 +1,7 @@
 #This is a high level example of OOP 
 #The example seeks to demonstrate OOP from the point of a company KFCP(Kariobangi Fried Chicken and Potatoes) extending itself to its branches
 
-class KFCPY(object):
+class MainBranchKFCP(object):
 	def __init__(self,funds,storage):
 		self.funds=funds 
 		self.storage=storage
@@ -24,7 +24,7 @@ class KFCPY(object):
  	def deposit_profit(self,ammount):
  		self.funds+=ammount
 
-class KariobangiNorthBranch(KFCP):
+class KariobangiNorthBranch(MainBranchKFCP):
 	def __init__(self,funds,storage):
 		super().__init__(funds,storage)
 		self.local_name = "Kariobangi North Branch"
@@ -36,7 +36,7 @@ class KariobangiNorthBranch(KFCP):
 	def market(self):
 		print("We have the best fried Potatoes and Chicken in %s %s" %(self.name,self.local_name))
 
-class KariobangiSouthBranch(KFCP):
+class KariobangiSouthBranch(MainBranchKFCP):
 	def __init__(self,funds,storage):
 		super().__init__(funds,storage)
 		self.local_name = "Kariobangi South Branch"
